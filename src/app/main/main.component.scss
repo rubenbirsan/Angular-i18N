@@ -1,0 +1,18 @@
+.active-link{
+    color: darkgoldenrod;
+  }
+  
+ 
+  table, th, td {
+    border: 2px solid #dbdbdb!important;
+    border-collapse: collapse;
+    border-spacing: 2px;
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+}

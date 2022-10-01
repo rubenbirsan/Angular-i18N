@@ -1,0 +1,10 @@
+{
+  "HELLO": "Hello",
+	"LANGUAGE": "Language",
+	"COUNTRY": "Country",
+	"CURRENCY": "Currency",
+  "TODAY": "today is",
+  "OTHER": "or",
+	"PLURAL": "Updated {count, plural, =0{just now} =1{one minute ago} other{# minutes ago}}",
+  "GENDER": "The Author is {gender, select, male{male} female{female} other{other}}"
+}

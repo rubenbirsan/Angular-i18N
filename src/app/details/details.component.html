@@ -1,0 +1,18 @@
+<div class="app-container">
+    <img src="assets/images/logo.svg" alt="logo" class="logo">
+    <h1>Multilanguage  Angular  Demo ngx-translate </h1> 
+    <nav class="nav-links" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">   
+      <a [ngClass]="{'active-link' : translate.currentLang.toLocaleLowerCase() === 'de'}" (click)="changeLanguage('de')">Deutsch</a>
+      <a [ngClass]="{'active-link' : translate.currentLang.toLocaleLowerCase() === 'en'}" (click)="changeLanguage('en')">English</a>
+      <a [ngClass]="{'active-link' : translate.currentLang.toLocaleLowerCase() === 'fr'}" (click)="changeLanguage('fr')">Français</a>
+      <a  style="padding-left: 10%;" routerLink="/">Main Page</a>
+    </nav>
+    <div class="router-container">
+      <div>   
+        <div>
+            <h3>{{'HELLO' | translate}} - {{'DETAILS' | translate}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+

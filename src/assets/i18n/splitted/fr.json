@@ -1,0 +1,5 @@
+{
+  "HELLO": "Bonjour",
+  "PLURAL": "Mis à jour: {count, plural, =0 {à l'instant} =1 {il y a une minute} other {il y a # minutes}}",
+  "GENDER": "L'auteur est {gender, select, male{un homme} female{une femme} other {autre}}"
+}

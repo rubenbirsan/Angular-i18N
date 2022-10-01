@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+img.logo{
+  height: 3rem;
+  float: left;
+  margin-top: -0.5rem;
+}
+
+img.test-image{
+  float: left;
+  height: 250px;
+  margin-right: 30px;
+}
+
+button.margin{
+  margin-right: 10px;
+}
+
+button.selected{
+  font-size: 20px;
+}
+
+$theme-colors: (
+        text-color: #374249,
+        primary-color: #00afc4,
+        primary-dark: #008591,
+        light-color: #f1f1f1
+);
+
+body {
+  background: map-get($theme-colors, light-color);
+  font-family: Roboto, "Verdana, Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.nav-links {
+  background: map-get($theme-colors, primary-dark);
+}
+
+.nav-links a {
+  color: map-get($theme-colors, light-color);
+  display: inline-block;
+  padding: 1rem;
+  margin-right: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.router-container {
+  border: 0.5rem map-get($theme-colors, primary-color) solid;
+  padding: 2rem;
+}
+

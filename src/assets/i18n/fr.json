@@ -1,0 +1,9 @@
+{
+  "HELLO": "Bonjour",
+	"LANGUAGE": "Langue",
+	"COUNTRY": "Pays",
+  "CURRENCY": "Monnaie",
+	"TODAY": "aujourd'hui est",
+	"OTHER": "ou",
+  "PLURAL": "Mis à jour: {count, plural, =0 {à l'instant} =1 {il y a une minute} other {il y a # minutes}}"
+}

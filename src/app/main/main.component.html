@@ -1,0 +1,83 @@
+<div class="app-container">
+    <img src="assets/images/logo.svg" alt="logo" class="logo">
+    <h1>Multilanguage Angular Demo ngx-translate</h1>
+    <nav class="nav-links" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+        <a [ngClass]="{'active-link' : translate.currentLang.toLocaleLowerCase() === 'de'}" (click)="changeLanguage('de')">Deutsch</a>
+        <a [ngClass]="{'active-link' : translate.currentLang.toLocaleLowerCase() === 'en'}" (click)="changeLanguage('en')">English</a>
+        <a [ngClass]="{'active-link' : translate.currentLang.toLocaleLowerCase() === 'fr'}" (click)="changeLanguage('fr')">Français</a>
+        <a style="padding-left: 10%;" routerLink="/details">Details</a>
+    </nav>
+    <div class="router-container">
+        <div>
+            <div>
+                <h3>{{'HELLO' | translate}}</h3>
+                <table>
+                    <tr>
+                        <td><b>{{'LANGUAGE' | translate}} </b> </td>
+                        <td>{{translate.currentLang.toLocaleLowerCase()}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>{{'COUNTRY' | translate}}</b></td>
+                        <td>{{translate.currentLang.toUpperCase()}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>{{'CURRENCY' | translate}}</b></td>
+                        <td>{{number  | currency : 'EUR' : 'symbol' }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>{{'TODAY' | translate}}</b></td>                       
+                        <td>{{today  | i18nDate : 'shortDate' : "" : translate.currentLang.toLocaleLowerCase()}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>{{'OTHER' | translate}} </b></td>
+                        <td> {{today  | i18nDate : 'full'}}</td>
+                    </tr>
+                </table>
+
+                <!-- <table>
+                    <tr>
+                        <td><b>{{'PART1.LANGUAGE' | translate}} </b> </td>
+                        <td>{{translate.currentLang.toLocaleLowerCase()}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>{{'PART1.COUNTRY' | translate}}</b></td>
+                        <td>{{translate.currentLang.toUpperCase()}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>{{'PART2.CURRENCY' | translate}}</b></td>
+                        <td>{{number  | currency : 'EUR' : 'symbol' }}</td>
+                    </tr>
+                    <tr>
+                        <td><b>{{'PART2.TODAY' | translate}}</b></td>
+                        <td>{{today  | date : 'shortDate' : "" : translate.currentLang.toLocaleLowerCase()}}</td>
+                    </tr>
+                    <tr>
+                        <td><b>{{'PART2.OTHER' | translate}} </b></td>
+                        <td> {{today  | i18nDate : 'full'}}</td>
+                    </tr>
+                </table> -->
+
+                <br><br>
+
+                <button class="margin" (click)="inc(-1)">-</button>
+                <button class="margin" (click)="inc(1)">+</button>
+
+                <span> {{'PLURAL' | translate: { count: minutes } }} </span>
+                <!-- <span translate [translateParams]="{ count: minutes }"> PLURAL </span> -->
+
+                <br><br>
+
+                <button class="margin" [ngClass]="{'selected' : gender == 'male' }" (click)="male()">&#9794;</button>
+                <button class="margin" [ngClass]="{'selected' : gender == 'female' }" (click)="female()">&#9792;</button>
+                <button class="margin" [ngClass]="{'selected' : gender == 'other' }" style="padding-top: 0;"(click)="other()">&#9895;</button>
+
+                <span> {{'GENDER' | translate: { gender: gender } }} </span>
+
+                <br><br>
+
+                <p-calendar dateFormat="dd.mm.yy" showButtonBar="true" [locale]="getCalendarData()"></p-calendar>
+                
+            </div>
+        </div>
+    </div>
+</div>
